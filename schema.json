@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StareyOmniLead",
+  "type": "object",
+  "properties": {
+    "lead_id": { "type": "string" },
+    "company_name": { "type": "string" },
+    "contact_email": { "type": "string" },
+    "industry": { "type": "string" },
+    "intent_score": { "type": "integer", "minimum": 1, "maximum": 100 },
+    "enrichment_status": { "type": "string", "enum": ["Verified", "Pending", "Discarded"] }
+  },
+  "required": ["lead_id", "company_name", "contact_email", "intent_score"]
+}
